@@ -1,3 +1,31 @@
 .App {
   text-align: center;
+  /* background: rgb(34,79,195);
+  background: linear-gradient(0deg, rgba(34,79,195,1) 1%, rgba(253,196,45,0.6475183823529411) 27%); */
+}
+
+.form-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-container input {
+  width: 30rem;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.form-container button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.details-page {
+  background: rgb(230,225,73);
+background: linear-gradient(0deg, rgba(230,225,73,0.8800113795518207) 79%, rgba(33,27,240,0.871608018207283) 100%);
 }

@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { NavLink, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/HomePage";
 import PokemonList from "./components/PokemonList";

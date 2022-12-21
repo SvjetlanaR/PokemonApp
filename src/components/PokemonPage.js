@@ -9,6 +9,7 @@ export default function PokemonPage() {
       front_default: "",
     },
   });
+
   const { name } = useParams();
 
   useEffect(() => {
@@ -17,12 +18,11 @@ export default function PokemonPage() {
       .then((res) => setPokeDetails(res.data))
       .catch((err) => console.log(err));
   }, [name]);
-  //console.log(pokeDetails);
 
   return (
     <div className="container">
       <div className="row">
-        <div className=" mx-auto my-5">
+        <div className="details-page mx-auto my-5">
           <h3>Pokemon Details</h3>
           <h2>{pokeDetails.name}</h2>
           <img src={pokeDetails.sprites.front_default} alt={pokeDetails.name} />
