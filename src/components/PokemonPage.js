@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function PokemonPage() {
-  const [pokeDetails, setPokeDetails] = useState("");
+  const [pokeDetails, setPokeDetails] = useState({
+    sprites: {
+      front_default: "",
+    },
+  });
   const { name } = useParams();
 
   useEffect(() => {
@@ -16,13 +20,17 @@ export default function PokemonPage() {
   //console.log(pokeDetails);
 
   return (
-    <div>
-      <h3>Pokemon Details</h3>
-      <h2>{pokeDetails.name}</h2>
-      {/* <img src={pokeDetails.sprites.front_default} alt={pokeDetails.name} /> */}
-      <p>Height: {pokeDetails.height}</p>
-      <p>Weight: {pokeDetails.weight}</p>
-      <p>Id: {pokeDetails.id}</p>
+    <div className="container">
+      <div className="row">
+        <div className=" mx-auto my-5">
+          <h3>Pokemon Details</h3>
+          <h2>{pokeDetails.name}</h2>
+          <img src={pokeDetails.sprites.front_default} alt={pokeDetails.name} />
+          <p>Height: {pokeDetails.height}</p>
+          <p>Weight: {pokeDetails.weight}</p>
+          <p>Id: {pokeDetails.id}</p>
+        </div>
+      </div>
     </div>
   );
 }

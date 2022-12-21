@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Link, NavLink, useLinkClickHandler } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -26,18 +26,20 @@ export default function PokemonList() {
         <button>search</button>
       </form>
       <NavLink to="/">HomePage</NavLink>
-      <NavLink to="/pokemon/:name">PokemonPage</NavLink>
-      <div>
-        {pokemon.map((poke) => {
-          return (
-            <div className="pokemon-list" key={poke.url}>
-              <h3> {poke.name}</h3>
-              <Link to={`/pokemon/${poke.name}`}>
-                <button>View more</button>
-              </Link>
-            </div>
-          );
-        })}
+
+      <div className="container">
+        <div className="row">
+          {pokemon.map((poke) => {
+            return (
+              <div className="col-sm-4 col-6 mx-auto my-4" key={poke.url}>
+                <h3> {poke.name}</h3>
+                <Link to={`/pokemon/${poke.name}`}>
+                  <button>View more</button>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
