@@ -16,7 +16,7 @@ export default function PokemonList() {
       .get(`https://pokeapi.co/api/v2/pokemon?offset=60&limit=60&`)
       .then((res) => setPokemon(res.data.results))
       .catch((err) => console.log(err));
-  }, [search]);
+  }, []);
 
   useEffect(() => {
     axios
