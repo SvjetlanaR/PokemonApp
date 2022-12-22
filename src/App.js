@@ -4,7 +4,7 @@ import "./App.css";
 import HomePage from "./components/HomePage";
 import PokemonList from "./components/PokemonList";
 import PokemonPage from "./components/PokemonPage";
-
+import "./scss/styles.scss";
 import { Route } from "react-router-dom";
 function App() {
   return (

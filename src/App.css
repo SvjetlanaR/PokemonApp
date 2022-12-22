@@ -29,3 +29,13 @@
   background: rgb(230,225,73);
 background: linear-gradient(0deg, rgba(230,225,73,0.8800113795518207) 79%, rgba(33,27,240,0.871608018207283) 100%);
 }
+
+.home-page {
+  background: rgb(212,214,224);
+background: radial-gradient(circle, rgba(212,214,224,0.11716561624649857) 80%, rgba(4,1,1,0.9967174369747899) 100%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 50px;
+min-height: 100vh;
+}

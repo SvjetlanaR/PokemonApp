@@ -16,11 +16,10 @@ export default function SearchBar({ setSearch }) {
 
   return (
     <div>
-      {" "}
       <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="find your pokemon"
+          placeholder="find your pokemon by name or pokedex"
           onChange={handleInput}
           value={value}
         ></input>
